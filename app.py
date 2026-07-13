@@ -50,79 +50,34 @@ PALETTES = {
 
 
 def inject_theme(theme: str) -> None:
-    c = PALETTES[theme]
     st.markdown(
-        f"""
-        
+        """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-.stApp {{
-background: linear-gradient(135deg, #0f172a, #1e293b);
-font-family: 'Inter', sans-serif;
-color: #ffffff;
-}}
-section[data-testid="stSidebar"]{{
-background:#111827;
-border-right:1px solid #334155;
-}}
-.block-container{{padding-top:1.5rem;max-width:72rem;}}
-.stButton>button{{
-width:100%;
-border:none;
-border-radius:14px;
-padding:.7rem 1rem;
-background:linear-gradient(90deg,#2563eb,#7c3aed);
-color:white;
-font-weight:600;
-transition:all .25s ease;
-box-shadow:0 8px 20px rgba(37,99,235,.25);
-}}
-.stButton>button:hover{{
-transform:translateY(-2px);
-box-shadow:0 12px 24px rgba(124,58,237,.35);
-}}
-[data-testid="stChatMessage"]{{
-border-radius:18px;
-border:1px solid #334155;
-background:rgba(255,255,255,.04);
-backdrop-filter:blur(12px);
-padding:1rem;
-margin-bottom:.8rem;
-}}
-.stChatInput textarea,.stTextInput input{{
-border-radius:14px !important;
-border:1px solid #475569 !important;
-background:#0f172a !important;
-color:white !important;
-}}
-.annotation{{
-font-size:.72rem;
-text-transform:uppercase;
-letter-spacing:.08em;
-color:#94a3b8;
-}}
-.kb-cell,.cite-card{{
-background:#1e293b;
-border:1px solid #334155;
-border-radius:16px;
-padding:.8rem;
-margin-bottom:.6rem;
-}}
-.kb-value{{font-size:1.4rem;font-weight:700;color:#fff;}}
-.badge{{
-display:inline-block;
-padding:.25rem .6rem;
-margin:.15rem;
-border-radius:999px;
-background:#312e81;
-color:#c7d2fe;
-font-size:.72rem;
-}}
-.hero-rule{{height:2px;background:linear-gradient(90deg,#2563eb,#7c3aed);margin:1rem 0;}}
-#MainMenu,footer{{visibility:hidden;}}
+html,body,[class*="css"]{font-family:'Inter',sans-serif;}
+.stApp{
+background:
+radial-gradient(circle at top left,#4338ca 0%,transparent 30%),
+radial-gradient(circle at bottom right,#2563eb 0%,transparent 30%),
+linear-gradient(135deg,#0f172a,#111827,#1e293b);
+color:#fff;
+}
+h1,h2,h3,h4,h5,h6{color:#fff!important;font-weight:700!important;}
+p,span,label,div{color:#e5e7eb!important;}
+small,.annotation{color:#94a3b8!important;}
+.block-container{max-width:72rem;padding-top:2rem;}
+section[data-testid="stSidebar"]{background:#111827;border-right:1px solid rgba(255,255,255,.08);}
+div[data-testid="stForm"]{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:25px;backdrop-filter:blur(15px);}
+.stTextInput input,.stChatInput textarea{background:#0f172a!important;color:#fff!important;border-radius:14px!important;border:1px solid #374151!important;}
+.stButton>button,.stFormSubmitButton>button{width:100%;border:none;border-radius:14px;padding:.8rem;background:linear-gradient(90deg,#2563eb,#7c3aed);color:#fff;font-weight:700;}
+.stButton>button:hover,.stFormSubmitButton>button:hover{transform:translateY(-2px);}
+[data-testid="stChatMessage"],.kb-cell,.cite-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:1rem;}
+.kb-value{color:#fff;font-size:1.5rem;font-weight:700;}
+.badge{display:inline-block;padding:.3rem .7rem;border-radius:999px;background:#3730a3;color:#c7d2fe;}
+.hero-rule{height:3px;background:linear-gradient(90deg,#2563eb,#7c3aed);border-radius:999px;margin:1rem 0;}
+#MainMenu,footer,header{visibility:hidden;}
 </style>
-
         """,
         unsafe_allow_html=True,
     )
