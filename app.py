@@ -50,38 +50,19 @@ PALETTES = {
 
 
 def inject_theme(theme: str) -> None:
-    st.markdown(
-        """
+    st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-html,body,[class*="css"]{font-family:'Inter',sans-serif;}
-.stApp{
-background:
-radial-gradient(circle at top left,#4338ca 0%,transparent 30%),
-radial-gradient(circle at bottom right,#2563eb 0%,transparent 30%),
-linear-gradient(135deg,#0f172a,#111827,#1e293b);
-color:#fff;
-}
-h1,h2,h3,h4,h5,h6{color:#fff!important;font-weight:700!important;}
-p,span,label,div{color:#e5e7eb!important;}
-small,.annotation{color:#94a3b8!important;}
-.block-container{max-width:72rem;padding-top:2rem;}
-section[data-testid="stSidebar"]{background:#111827;border-right:1px solid rgba(255,255,255,.08);}
-div[data-testid="stForm"]{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:25px;backdrop-filter:blur(15px);}
-.stTextInput input,.stChatInput textarea{background:#0f172a!important;color:#fff!important;border-radius:14px!important;border:1px solid #374151!important;}
-.stButton>button,.stFormSubmitButton>button{width:100%;border:none;border-radius:14px;padding:.8rem;background:linear-gradient(90deg,#2563eb,#7c3aed);color:#fff;font-weight:700;}
-.stButton>button:hover,.stFormSubmitButton>button:hover{transform:translateY(-2px);}
-[data-testid="stChatMessage"],.kb-cell,.cite-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:1rem;}
-.kb-value{color:#fff;font-size:1.5rem;font-weight:700;}
-.badge{display:inline-block;padding:.3rem .7rem;border-radius:999px;background:#3730a3;color:#c7d2fe;}
-.hero-rule{height:3px;background:linear-gradient(90deg,#2563eb,#7c3aed);border-radius:999px;margin:1rem 0;}
-#MainMenu,footer,header{visibility:hidden;}
+html,body,[class*="css"]{font-family:Inter,sans-serif;}
+.stApp{background:linear-gradient(135deg,#0f172a,#111827,#1e293b);color:#fff;}
+h1,h2,h3,h4,h5,h6,p,span,label,div{color:#fff!important;}
+.block-container{max-width:78rem;padding-top:2rem;}
+section[data-testid="stSidebar"]{background:#111827;}
+div[data-testid="stForm"]{max-width:680px;margin:auto;padding:32px;border-radius:24px;background:rgba(255,255,255,.06);}
+.stTextInput input,.stChatInput textarea{height:52px;border-radius:14px!important;}
+.stButton>button,.stFormSubmitButton>button{width:100%;border-radius:14px;}
+.hero-rule{height:3px;background:linear-gradient(90deg,#2563eb,#7c3aed);}
 </style>
-        """,
-        unsafe_allow_html=True,
-    )
-
+""",unsafe_allow_html=True)
 
 # ---------------------------------------------------------------------------
 # Cached resources — built once per process, not once per rerun
