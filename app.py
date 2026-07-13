@@ -57,16 +57,16 @@ def inject_theme(theme: str) -> None:
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-.stApp{
+.stApp{{
 background:linear-gradient(135deg,#0f172a,#1e293b);
 font-family:'Inter',sans-serif;
-}
-section[data-testid="stSidebar"]{
+}}
+section[data-testid="stSidebar"]{{
 background:#111827;
 border-right:1px solid #334155;
-}
-.block-container{padding-top:1.5rem;max-width:72rem;}
-.stButton>button{
+}}
+.block-container{{padding-top:1.5rem;max-width:72rem;}}
+.stButton>button{{
 width:100%;
 border:none;
 border-radius:14px;
@@ -76,40 +76,40 @@ color:white;
 font-weight:600;
 transition:all .25s ease;
 box-shadow:0 8px 20px rgba(37,99,235,.25);
-}
-.stButton>button:hover{
+}}
+.stButton>button:hover{{
 transform:translateY(-2px);
 box-shadow:0 12px 24px rgba(124,58,237,.35);
-}
-[data-testid="stChatMessage"]{
+}}
+[data-testid="stChatMessage"]{{
 border-radius:18px;
 border:1px solid #334155;
 background:rgba(255,255,255,.04);
 backdrop-filter:blur(12px);
 padding:1rem;
 margin-bottom:.8rem;
-}
-.stChatInput textarea,.stTextInput input{
+}}
+.stChatInput textarea,.stTextInput input{{
 border-radius:14px !important;
 border:1px solid #475569 !important;
 background:#0f172a !important;
 color:white !important;
-}
-.annotation{
+}}
+.annotation{{
 font-size:.72rem;
 text-transform:uppercase;
 letter-spacing:.08em;
 color:#94a3b8;
-}
-.kb-cell,.cite-card{
+}}
+.kb-cell,.cite-card{{
 background:#1e293b;
 border:1px solid #334155;
 border-radius:16px;
 padding:.8rem;
 margin-bottom:.6rem;
-}
-.kb-value{font-size:1.4rem;font-weight:700;color:#fff;}
-.badge{
+}}
+.kb-value{{font-size:1.4rem;font-weight:700;color:#fff;}}
+.badge{{
 display:inline-block;
 padding:.25rem .6rem;
 margin:.15rem;
@@ -117,9 +117,9 @@ border-radius:999px;
 background:#312e81;
 color:#c7d2fe;
 font-size:.72rem;
-}
-.hero-rule{height:2px;background:linear-gradient(90deg,#2563eb,#7c3aed);margin:1rem 0;}
-#MainMenu,footer{visibility:hidden;}
+}}
+.hero-rule{{height:2px;background:linear-gradient(90deg,#2563eb,#7c3aed);margin:1rem 0;}}
+#MainMenu,footer{{visibility:hidden;}}
 </style>
 
         """,
