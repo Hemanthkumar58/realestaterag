@@ -57,9 +57,10 @@ def inject_theme(theme: str) -> None:
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-.stApp{{
-background:linear-gradient(135deg,#0f172a,#1e293b);
-font-family:'Inter',sans-serif;
+.stApp {{
+background: linear-gradient(135deg, #0f172a, #1e293b);
+font-family: 'Inter', sans-serif;
+color: #ffffff;
 }}
 section[data-testid="stSidebar"]{{
 background:#111827;
